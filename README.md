@@ -1,4 +1,5 @@
 # k8s-rbac-setup
+- openssl genrsa -out my_user.key 2048
 - openssl req -new -key my_user.key -out my_user.csr 
 - openssl req -new -key my_user.key -out my_user.csr -subj "/CN=my_user/O=dev
 - openssl x509 -req -in my_user.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out my_user.crt -days 365
